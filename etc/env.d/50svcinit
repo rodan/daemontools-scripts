@@ -1,0 +1,8 @@
+# /etc/env.d/50svcinit:
+# $Header:  Exp $
+
+SVCDIR="/service"
+SVCVARDIR="/var/service"
+SVCTIMEOUT=15
+CONFIG_PROTECT="/var/service"
+
