@@ -1,0 +1,9 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec 2>&1
+exec <seed
+exec envdir /etc/dnscachex/env sh -c '
+  exec envuidgid dnscache softlimit -o250 -d "$DATALIMIT" /usr/bin/dnscache 
+'
+

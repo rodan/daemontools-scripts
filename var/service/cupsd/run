@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-print/cups supervise script
+
+exec /usr/sbin/cupsd -f
+

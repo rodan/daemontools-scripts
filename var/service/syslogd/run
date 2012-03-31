@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# app-admin/sysklogd supervise script
+
+exec /sbin/syslogd -n
+

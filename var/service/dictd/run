@@ -1,0 +1,9 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# app-text/dictd supervise script
+
+[ -f /etc/conf.d/dictd ] && source /etc/conf.d/dictd
+
+exec /usr/sbin/dictd -d nodetach ${EARGS} &>/dev/null
+

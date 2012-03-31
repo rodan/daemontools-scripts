@@ -1,0 +1,8 @@
+#!/bin/sh
+# $Header:  Exp $ 
+
+# www-servers/publicfile supervise script
+
+exec 2>&1
+exec /usr/bin/envuidgid ftp /usr/bin/softlimit -o20 -d50000 /usr/bin/tcpserver -vDRHl0 -b50 -c100 0 80 /usr/bin/httpd /var/www
+

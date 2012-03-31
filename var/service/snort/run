@@ -1,0 +1,10 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-analyzer/snort supervise script
+
+[ -f /etc/conf.d/snort ] && source /etc/conf.d/snort
+
+exec /usr/bin/snort ${SNORT_OPTS/-D}
+
+

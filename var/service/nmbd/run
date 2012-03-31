@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-fs/samba supervise script
+
+exec /usr/sbin/nmbd --foreground
+

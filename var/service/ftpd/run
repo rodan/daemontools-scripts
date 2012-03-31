@@ -1,0 +1,9 @@
+#!/bin/sh
+# $Header:  Exp $ 
+
+# www-servers/publicfile supervise script
+
+exec 2>&1
+exec envuidgid ftp softlimit -o20 -d50000 tcpserver -vDRHl0 -b20 -c40 -B'220 Features: a p .
+' 0 21 /usr/bin/ftpd /home/public/file
+

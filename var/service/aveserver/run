@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# app-antivirus/kaspersky-cli supervise script (upcoming) 
+
+exec fghack /opt/kav/bin/aveserver -c /opt/kav/etc/kav4unix.conf &>/dev/null
+

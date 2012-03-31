@@ -1,0 +1,14 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# dev-util/cvs supervise script
+
+# the last time I've checked this was not as reliable as it should have been.
+# go back to xinetd implementation if you encounter problems.
+
+ALLOWED_IPS=`[ -f /etc/tcp.cvs.cdb ] && echo '-x /etc/tcp.cvs.cdb'`
+BIND_IP="127.0.0.1"
+
+exec /usr/bin/tcpserver ${ALLOWED_IPS} ${BIND_IP} cvspserver /usr/bin/cvs --allow-root=/var/cvsroot pserver
+
+

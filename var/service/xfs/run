@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# x font server supervise script
+
+exec /usr/X11R6/bin/xfs -droppriv
+

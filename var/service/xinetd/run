@@ -1,0 +1,6 @@
+#!/bin/sh
+# sys-apps/xinetd supervise script
+exec 2>&1
+source /etc/conf.d/xinetd
+exec /usr/sbin/xinetd -dontfork -pidfile /var/run/xinetd.pid ${XINETD_OPTS}
+

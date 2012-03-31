@@ -1,0 +1,9 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-analyzer/net-snmp supervise script
+
+[ -f /etc/conf.d/snmpd ] && source /etc/conf.d/snmpd
+
+exec /usr/sbin/snmpd -f ${SNMPD_FLAGS} 
+

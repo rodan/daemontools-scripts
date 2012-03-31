@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-misc/stunnel supervise script
+
+exec /usr/sbin/stunnel /etc/stunnel/stunnel_client.conf
+

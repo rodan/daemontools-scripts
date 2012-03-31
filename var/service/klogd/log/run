@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec /usr/local/bin/setuidgid log /usr/local/bin/multilog t /var/log/klogd
+

@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-ftp/proftpd supervise script
+
+exec /usr/sbin/proftpd -n 2>&1
+

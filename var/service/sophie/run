@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# app-antivirus/sophie supervise script 
+
+exec /opt/bin/sophie -d &>/dev/null
+

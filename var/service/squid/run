@@ -1,0 +1,9 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# www-proxy/squid supervise script
+
+[ -f /etc/conf.d/squid ] && source /etc/conf.d/squid
+
+exec /usr/sbin/squid -N ${SQUID_OPTS}
+

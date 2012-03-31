@@ -1,0 +1,9 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# app-antivirus/clamav supervise script
+
+# make sure you enable 'Foreground' in /etc/clamav.conf
+
+exec /usr/sbin/clamd &>/dev/null
+

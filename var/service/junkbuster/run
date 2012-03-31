@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Header:  Exp $ 
+
+exec /usr/sbin/junkbuster /etc/junkbuster/config
+

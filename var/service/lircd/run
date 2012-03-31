@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# app-misc/lirc supervise script
+
+exec /usr/sbin/lircd --nodaemon --device=/dev/tts/1 &>/dev/null
+

@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec setuidgid dnslog multilog t /var/log/dnscachex/
+

@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# app-antivirus/trophie supervise script
+
+exec /opt/bin/trophie -d &>/dev/null
+

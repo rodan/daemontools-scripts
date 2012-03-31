@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec setuidgid sockd multilog t /var/log/sockd
+

@@ -1,0 +1,10 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-www/apache supervise script
+# -F: run main process in foreground, for process supervisors
+
+[ -f /etc/conf.d/apache ] && source /etc/conf.d/apache
+
+exec /usr/sbin/apache -F ${APACHE_OPTS}
+

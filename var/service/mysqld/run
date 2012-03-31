@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# dev-db/mysql supervise script
+
+exec /usr/sbin/mysqld --user=mysql --binlog-do-db=mysql
+

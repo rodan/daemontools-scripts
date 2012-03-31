@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-dialup/slmodem supervise script
+
+exec /usr/sbin/slmodemd --country=ROMANIA &>/dev/null
+ 

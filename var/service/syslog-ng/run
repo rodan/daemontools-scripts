@@ -1,0 +1,6 @@
+#!/bin/sh
+# app-admin/syslog-ng supervise script 
+echo $$ > /var/run/syslog-ng.pid
+exec 2>&1
+exec /usr/sbin/syslog-ng -F
+

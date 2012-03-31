@@ -1,0 +1,14 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-misc/dante supervise script
+
+[ -f /etc/conf.d/dante-sockd ] && source /etc/conf.d/dante-sockd
+
+SOCKD_OPT="-N"
+[ "${SOCKD_FORKDEPTH}" -gt 1 ] && SOCKD_OPT="${SOCKD_OPT} -N ${SOCKD_FORKDEPTH}"
+[ "${SOCKD_DEBUG}" -eq 1 ] && SOCKD_OPT="${SOCKD_OPT} -d"
+[ "${SOCKD_DISABLE_KEEPALIVE}" -eq 1 ] && SOCKD_OPT="${SOCKD_OPT} -n"
+
+exec /usr/sbin/sockd ${SOCKD_OPT}
+

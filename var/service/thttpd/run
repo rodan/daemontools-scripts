@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# www-servers/thttpd supervise script
+
+exec /usr/sbin/thttpd -r -h 127.0.0.1 -d /var/www/localhost/ -D -u ftp -g 
+

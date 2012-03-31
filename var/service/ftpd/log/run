@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $ 
+
+# www-servers/publicfile supervise script
+
+exec setuidgid ftplog multilog t ./main '-*' '+* * status: *' =status
+

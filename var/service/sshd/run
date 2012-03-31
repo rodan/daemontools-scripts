@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-misc/openssh supervise script
+
+exec /usr/sbin/sshd -D
+

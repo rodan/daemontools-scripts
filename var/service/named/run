@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# net-dns/bind supervise script
+
+exec /usr/sbin/named -f
+

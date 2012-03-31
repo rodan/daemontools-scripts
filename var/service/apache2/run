@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[ -f /etc/conf.d/apache2 ] && source /etc/conf.d/apache2
+
+exec /usr/sbin/apache2 -DNO_DETACH ${APACHE2_OPTS}
+
