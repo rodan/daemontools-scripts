@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec setuidgid log multilog t s100000 n2 ./main
+

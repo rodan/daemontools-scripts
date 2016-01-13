@@ -1,0 +1,6 @@
+#!/bin/bash
+
+exec 2>&1
+
+exec /usr/bin/tcpserver -R -c40 -u 1007 -g 1006 109.169.51.9 26 /usr/sbin/smtarpit 2>&1
+

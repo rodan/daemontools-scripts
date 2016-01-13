@@ -1,0 +1,9 @@
+#!/bin/sh
+
+touch /var/lib/arpwatch/eth0.dat
+chown arpwatch:arpwatch /var/lib/arpwatch/eth0.dat
+
+sleep 30
+
+exec /usr/sbin/arpwatch -F -u arpwatch -i eth0 -f /var/lib/arpwatch/eth0.dat -N
+

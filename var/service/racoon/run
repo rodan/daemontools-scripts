@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $ 
+
+exec 2>&1
+
+exec racoon -F -f /etc/racoon/racoon.conf
+

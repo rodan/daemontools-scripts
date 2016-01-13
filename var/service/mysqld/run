@@ -3,5 +3,8 @@
 
 # dev-db/mysql supervise script
 
+mkdir /var/run/mysqld
+chown mysql:mysql /var/run/mysqld
+
 exec /usr/sbin/mysqld --user=mysql --binlog-do-db=mysql
 

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+/usr/sbin/bmc-watchdog --set --timer-use=4 --pre-timeout-interrupt=0 --timeout-action=1 --clear-bios-frb2 --clear-bios-post --clear-os-load --clear-sms-os --clear-oem --initial-countdown=120 --start-after-set --reset-if-running
+
+sleep 2
+

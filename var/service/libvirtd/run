@@ -1,0 +1,10 @@
+#!/bin/sh
+# $Header:  Exp $
+
+#exec 2>&1
+#mount -o remount,rw /local
+
+( sleep 10; chmod 666 /var/run/libvirt/libvirt-sock ) &
+
+exec /usr/sbin/libvirtd
+

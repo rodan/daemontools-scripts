@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec setuidgid log multilog t s2000000 /var/log/laboule-tarpit/
+

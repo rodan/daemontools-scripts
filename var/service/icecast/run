@@ -1,0 +1,4 @@
+#!/bin/sh
+# $Header:  Exp $ 
+
+exec su - icecast -c "icecast -c /etc/icecast/icecast.conf"

@@ -1,0 +1,10 @@
+#!/bin/sh
+# $Header:  Exp $
+
+sleep 30
+
+hciconfig hci0 up
+
+exec /usr/bin/rfcomm connect rfcomm0 00:06:66:67:EF:5D
+#exec /usr/bin/rfcomm bind rfcomm0 00:06:66:67:EF:5D
+

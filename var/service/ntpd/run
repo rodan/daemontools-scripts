@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# net-misc/openntpd supervise script
+
+sleep 600
+
+rm -f /run/ntpd.sock
+exec /usr/sbin/ntpd -d -s
+

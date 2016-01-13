@@ -1,0 +1,4 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec /opt/rav/bin/ravmd --user qmailq --group qmail --foreground

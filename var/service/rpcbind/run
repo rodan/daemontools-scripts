@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# -s
+exec /sbin/rpcbind -s -d
+

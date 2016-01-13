@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sleep 5
+
+exec /usr/libexec/ekey-egd-linux -H 10.212.0.3 -p 41300 -r 10 -b 2
+
+#/sbin/sysctl -q -w kernel.random.write_wakeup_threshold=1024
+#exec /usr/libexec/ekey-egd-linux -H 10.212.0.3 -p 41300 -r 10 -b 2
+#/sbin/sysctl -q -w kernel.random.write_wakeup_threshold=128
+

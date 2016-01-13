@@ -1,0 +1,5 @@
+#!/bin/bash
+
+exec /usr/sbin/in.tftpd --foreground -4 --address 10.212.0.3 --port-range 4096:32767 --secure /local/tftp
+
+

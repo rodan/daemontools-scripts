@@ -1,0 +1,7 @@
+#!/bin/sh
+
+#OPTS="--no-action"
+OPTS=""
+
+/usr/bin/fghack /usr/sbin/watchdog ${OPTS}
+

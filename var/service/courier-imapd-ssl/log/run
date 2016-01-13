@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec /usr/bin/setuidgid log /usr/bin/multilog t ./main
+

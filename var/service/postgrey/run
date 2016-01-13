@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec 2>&1
+
+exec postgrey --dbdir=/var/spool/postgrey/ --user=postgrey --group=postgrey --unix=/var/spool/postfix/postgrey/postgrey --delay=600 --whitelist-clients=/etc/postfix/postgrey_whitelist_clients --whitelist-clients=/etc/postfix/postgrey_whitelist_clients.local --greylist-text='greylisted, do come back later'
+

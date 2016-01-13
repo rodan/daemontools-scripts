@@ -1,0 +1,2 @@
+#!/bin/sh
+exec setuidgid log multilog t s10000000 n2 /var/log/hostapd

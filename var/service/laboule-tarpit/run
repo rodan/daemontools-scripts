@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec /local/adm/laboule/bin/laboule-tarpit --server
+

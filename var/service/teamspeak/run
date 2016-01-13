@@ -1,0 +1,13 @@
+#!/bin/sh
+
+exec 2>&1
+ulimit -r 99
+
+[ -d /var/run/teamspeak3-server ] || mkdir /var/run/teamspeak3-server
+chown teamspeak3:teamspeak3 /var/run/teamspeak3-server
+
+#exec su -s /bin/bash - teamspeak3 -c "cd /opt/teamspeak3-server/var; /opt/teamspeak3-server/sbin/ts3server-bin inifile=/etc/teamspeak3-server/server.conf"
+
+sleep 10
+exec setuidgid teamspeak3 /local/bin/teamspeak
+

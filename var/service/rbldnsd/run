@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+sleep 30
+
+exec /usr/sbin/rbldnsd -n -b 10.212.6.1 -w /var/db/rbldnsd/ -l log rbl.simplex.ro:dnset:domains rbl.simplex.ro:ip4set:ip
+

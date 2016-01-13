@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec /usr/bin/spawn-fcgi -n -f /usr/sbin/fcgiwrap -u nginx -s /var/run/fcgiwrap.sock -M 0700
+

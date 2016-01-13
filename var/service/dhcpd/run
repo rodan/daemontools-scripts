@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -f /var/run/dhcp/dhcpd.pid
+
+exec /usr/sbin/dhcpd -f eth0
+

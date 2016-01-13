@@ -1,0 +1,4 @@
+#!/bin/bash
+
+exec /usr/bin/tcpserver -R -c10 -u 1005 -g 85 10.212.0.3 6566 /usr/sbin/saned 2>&1
+

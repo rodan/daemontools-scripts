@@ -1,0 +1,5 @@
+#!/bin/bash
+
+exec /sbin/portmap -f -t /var/empty -u 113 -g 111
+
+

@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# app-misc/lirc supervise script
+
+exec /usr/bin/irexec /etc/lircrc &>/dev/null
+

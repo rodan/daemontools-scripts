@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec /usr/sbin/opendkim -f -x /etc/opendkim/opendkim.conf
+

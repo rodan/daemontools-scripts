@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sleep 30
+
+/usr/sbin/rpc.nfsd --host 10.212.0.3 8 
+
+exec /usr/sbin/rpc.mountd --foreground --port 4002
+

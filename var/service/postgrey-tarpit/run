@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec 2>&1
+
+exec postgrey-tarpit --dbdir=/var/spool/postgrey-tarpit/ --user=postgrey --group=postgrey --unix=/var/spool/postfix/postgrey/postgrey-tarpit --delay=1800 --tarpit=125 --targrey --retry-count=2 --greylist-text='greylisted, go fish for a while'
+

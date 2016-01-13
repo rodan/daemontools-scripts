@@ -4,5 +4,5 @@
 # net-dns/djbdns supervise script
 
 exec 2>&1
-exec envuidgid tinydns envdir /etc/tinydns/env softlimit -d300000 /usr/bin/tinydns
+exec envuidgid tinydns envdir /var/tinydns/env softlimit -d300000 /usr/bin/tinydns
 

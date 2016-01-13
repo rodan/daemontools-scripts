@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rm -f /run/nginx.pid
+#mkdir -p /var/tmp/nginx
+exec /usr/sbin/nginx
+

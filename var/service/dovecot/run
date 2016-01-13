@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -f /var/run/dovecot/master.pid
+
+exec /usr/sbin/dovecot -F
+

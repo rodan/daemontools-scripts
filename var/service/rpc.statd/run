@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sleep 30
+sleep 2
+
+exec /sbin/rpc.statd -F --port 4003 --outgoing-port 4004
+

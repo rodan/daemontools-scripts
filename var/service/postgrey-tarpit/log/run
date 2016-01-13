@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec setuidgid log multilog t /var/log/postgrey-tarpit
+

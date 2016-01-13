@@ -1,0 +1,4 @@
+#!/bin/sh
+# $Header:  Exp $ 
+
+exec setuidgid qmaill multilog t /var/log/gmetad 

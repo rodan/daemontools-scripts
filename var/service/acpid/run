@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec /usr/sbin/acpid --foreground &>/dev/null
+

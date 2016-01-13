@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# net-mail/courier-imap supervise script
+# imapd-ssl component
+
+sleep 20
+
+# logging will be done by multilog
+exec 2>&1
+
+[[ -f /etc/courier-imap/imapd && -f /etc/courier-imap/imapd-ssl ]] || {
+	echo 'configuration files are missing'
+	sleep 30
+	exit 1
+}
+
+prefix=/usr
+exec_prefix=/usr
+bindir=/usr/sbin
+libexecdir=/usr/lib/courier-imap
+
+source /etc/courier-imap/imapd
+source /etc/courier-imap/imapd-ssl
+
+export IMAP_TLS=1
+eval `sed -n '/^#/d;/=/p' </etc/courier-imap/imapd | \
+                sed 's/=.*//;s/^/export /;s/$/;/'`
+eval `sed -n '/^#/d;/=/p' </etc/courier-imap/imapd-ssl | \
+                sed 's/=.*//;s/^/export /;s/$/;/'`
+
+/usr/bin/tcpserver -v -c${MAXDAEMONS} -v -R -H ${SSLADDRESS} ${SSLPORT} \
+${bindir}/couriertls -server -tcpd ${bindir}/imaplogin \
+${libexecdir}/courier-imapd.indirect ${MAILDIRPATH} || sleep 10
+

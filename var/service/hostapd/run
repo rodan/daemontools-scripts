@@ -1,0 +1,8 @@
+#!/bin/sh
+# $Header:  Exp $
+
+sleep 10
+
+exec 2>&1
+exec hostapd /etc/hostapd/hostapd.conf
+

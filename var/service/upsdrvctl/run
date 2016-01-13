@@ -1,0 +1,8 @@
+#!/bin/sh
+# $Header:  Exp $
+
+#exec /usr/bin/fghack /usr/sbin/upsdrvctl -u root start apc
+exec /usr/sbin/upsdrvctl -u root start apc
+
+sleep 10
+
