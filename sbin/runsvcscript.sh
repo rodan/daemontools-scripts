@@ -8,7 +8,7 @@
 
 [ -z "${SVCDIR}" ] && SVCDIR="/service"
 [ -z "${SVCVARDIR}" ] && SVCVARDIR="/var/service"
-[ -z "${SVCTIMEOUT}" ] && SVCTIMEOUT=15
+[ -z "${SVCTIMEOUT}" ] && SVCTIMEOUT=10
 
 # first option is the name of the service
 SVC="$1"
@@ -56,8 +56,10 @@ svc_waitdown() {
 		echo -n .
 		sleep 1
 		count=$((${count}+1))
+        [ ${count} -gt 8 ] && svc -k "$1"
 		[ ${count} -gt ${SVCTIMEOUT} ] && return 1
 	done
+    return 0
 }
 
 # starts supervise for $1 and bails out if no success after ${SVCTIMEOUT} seconds
@@ -90,7 +92,12 @@ stop() {
 		if svc_waitdown "$1"; then
 			echo "$1 stopped"
 		else
-			echo "error: failed to stop $1"
+            svc -k "$1"
+            if svc_waitdown "$1"; then
+                echo "$1 stopped"
+            else
+			    echo "error: failed to stop $1"
+            fi
 		fi
 	else
 		echo "warning: $1 already down"
