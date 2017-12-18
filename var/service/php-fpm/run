@@ -1,0 +1,4 @@
+#!/bin/sh
+# $Header:  Exp $
+
+php-fpm -c /etc/php/fpm-php7.0/php.ini --fpm-config /etc/php/fpm-php7.0/php-fpm.conf --nodaemonize
