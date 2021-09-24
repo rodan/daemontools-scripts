@@ -1,5 +1,8 @@
 #!/bin/sh
 # $Header:  Exp $
 
-exec /usr/bin/setuidgid log /usr/bin/multilog t /var/log/fcron
+mkdir main
+chown log:nofiles main
+
+exec /usr/bin/setuidgid log /usr/bin/multilog t ./main
 
