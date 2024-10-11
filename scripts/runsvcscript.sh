@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Author: Bruce Guenter <bruceg@em.ca>
-# Gentoo facelift by: Petre Rodan <petre.rodan@subdimension.ro>
+# Gentoo, FreeBSD facelift by: Petre Rodan <petre.rodan@subdimension.ro>
 
 # when run in Linux the script gets the environment variables thru the system wide /etc/profile.
 # under FreeBSD let's explicitly read a configuration file 
@@ -261,6 +261,11 @@ main() {
         exit 1 
         ;;
     esac
+}
+
+[ $# != 2 ] && {
+    svc_usage
+    exit 1
 }
 
 if [ "${SVC}" = "all" -a ! "${SVCCMD}" = "add" -a ! "${SVCCMD}" = "remove" ]; then
