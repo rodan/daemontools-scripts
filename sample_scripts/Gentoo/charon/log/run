@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $ 
+
+mkdir -p ./main
+chown -R log:nofiles ./main
+exec setuidgid log multilog t ./main
+

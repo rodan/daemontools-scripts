@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sleep 10
+mkdir -p /var/multilog/fcron
+chown -R multilog:multilog /var/multilog/fcron
+exec setuidgid multilog multilog t s10000000 n2 /var/multilog/fcron
+

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sleep 15
+
+exec /usr/sbin/rpc.lockd -F -p 16001
+

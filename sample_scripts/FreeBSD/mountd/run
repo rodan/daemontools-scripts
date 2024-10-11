@@ -1,0 +1,13 @@
+#!/bin/sh
+
+sleep 15
+
+start_nfs() {
+    sleep 5
+    /etc/rc.d/nfsd onestart
+}
+
+start_nfs &
+
+exec /usr/sbin/mountd -d -r -S -p 755
+

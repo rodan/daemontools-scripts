@@ -1,0 +1,11 @@
+#!/bin/bash
+
+exec 2>&1
+
+swanctl_load() {
+    sleep 1
+    swanctl --load-all
+}
+
+swanctl_load &
+exec /usr/local/libexec/ipsec/starter --nofork --daemon charon

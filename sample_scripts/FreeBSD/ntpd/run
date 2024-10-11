@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sleep 600
+
+exec /usr/sbin/ntpd -n -p /var/db/ntp/ntpd.pid -c /etc/ntp.conf -f /var/db/ntp/ntpd.drift -g

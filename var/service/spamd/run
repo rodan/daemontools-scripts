@@ -1,5 +1,0 @@
-#!/bin/sh
-
-exec /usr/sbin/spamd --max-children 3 --username=spamd --nouser-config --socketpath=/var/run/spamd/spamd --socketmode=660 --socketowner=spamd --socketgroup=users
-
-

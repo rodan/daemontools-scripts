@@ -1,0 +1,10 @@
+#!/bin/sh
+# $Header:  Exp $
+
+sleep 10
+
+exec 2>&1
+exec setuidgid umurmur umurmurd -d -c /usr/local/etc/umurmur/umurmur.conf
+
+#exec su - umurmur -c 'umurmurd -d -c /usr/local/etc/umurmur/umurmur.conf'
+

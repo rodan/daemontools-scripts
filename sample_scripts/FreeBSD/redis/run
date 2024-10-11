@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec setuidgid redis /usr/local/bin/redis-server
+

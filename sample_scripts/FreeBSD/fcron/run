@@ -1,0 +1,8 @@
+#!/bin/sh
+# $Header:  Exp $
+
+# sys-apps/fcron supervise script
+
+exec 2>&1
+exec /usr/local/sbin/fcron --foreground
+

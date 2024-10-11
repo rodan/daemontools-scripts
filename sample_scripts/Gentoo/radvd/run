@@ -1,0 +1,9 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec 2>&1
+mkdir -p /var/run/radvd/
+chown -R radvd:root /var/run/radvd/
+
+exec /usr/sbin/radvd --debug 1 --username radvd --config /etc/radvd.conf --logmethod=stderr --nodaemon
+

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sleep 10
+mkdir -p /var/multilog/charon
+chown -R multilog:multilog /var/multilog/charon
+exec setuidgid multilog multilog t s10000000 n2 /var/multilog/charon
+
+

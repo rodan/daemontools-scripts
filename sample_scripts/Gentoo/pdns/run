@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Header:  Exp $
+
+exec /usr/sbin/pdns_server --daemon=no --guardian=yes
+

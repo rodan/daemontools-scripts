@@ -1,0 +1,7 @@
+#!/bin/sh
+# $Header:  Exp $
+
+vnstat --create -i eth0
+
+exec vnstatd --nodaemon
+
